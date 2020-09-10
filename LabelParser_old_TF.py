@@ -87,6 +87,8 @@ with tf.Graph().as_default():
     e_embedding = pl.get_variable("embedding", [NWORDS, DIM_EMBEDDING], initializer=glove_init)
     e_embed = tf.nn.embedding_lookup(e_embedding, e_input)
 
+# include the character level embeddings
+
 #   BLSTM — bidirectional LSTM
 #         — How many hidden layers and units
 #         — Only output after the whole span has been parsed, not at every input

@@ -82,6 +82,10 @@ model = keras.Sequential()
 #             — embeddings will consist of a word vector and a PoS embedding concatenated (add this in later)
 model.add(layers.Embedding(input_dim=DIM_EMBEDDING, output_dim=DIM_EMBEDDING))
 
+# include the character level embeddings
+# probably use a cnn for this
+
+
 #   BLSTM — bidirectional LSTM
 #         — How many hidden layers and units
 #         — Only output after the whole span has been parsed, not at every input
